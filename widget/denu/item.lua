@@ -26,15 +26,16 @@ M.object = { is_menu_item = true }
 ---@field mouse_move_select? boolean
 ---@field mouse_move_show_submenu? boolean
 ---@field cache_submenu? boolean
----@field submenu? MeboxItem.submenu
----@field callback? fun(item: MeboxItem, menu: Mebox, context: Mebox.context): boolean?
----@field on_show? fun(item: MeboxItem, menu: Mebox, args: Mebox.show.args, context: Mebox.context): boolean?
----@field on_hide? fun(item: MeboxItem, menu: Mebox)
+---@field submenu? unknown
+---@field callback? fun(item: DenuItem, menu: Denu, context: Mebox.context): boolean?
+---@field on_show? fun(item: DenuItem, menu: Denu, args: Mebox.show.args, context: Mebox.context): boolean?
+---@field on_hide? fun(item: DenuItem, menu: Denu)
 ---@field on_ready? fun(item_widget?: wibox.widget.base, item: MeboxItem, menu: Mebox, args: Mebox.show.args, context: Mebox.context)
 ---@field layout_id? string
 ---@field layout_add? fun(layout: wibox.layout, item_widget: wibox.widget.base)
 ---@field buttons_builder? fun(item: MeboxItem, menu: Mebox, default_click_action: function): awful.button[]
 ---@field template? widget_template
+---@field.update_callback fun(self: DenuItem, item, menu)
 
 
 ---@param context widget_context
